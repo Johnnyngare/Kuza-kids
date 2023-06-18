@@ -1,0 +1,139 @@
+ERROR - 2023-06-15 07:13:21 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'codeigniter_aut...', 3306, '', 0)
+#1 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('ngarejohnny@gma...', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ngarejohnny@gma...', Array, Array)
+#7 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\app\Controllers\Auth.php(26): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\CodeIgniter.php(934): App\Controllers\Auth->save()
+#10 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('ngarejohnny@gma...', 'email', Array, NULL, 'email')
+#5 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ngarejohnny@gma...', Array, Array)
+#6 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\app\Controllers\Auth.php(26): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\CodeIgniter.php(934): App\Controllers\Auth->save()
+#9 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-15 07:13:21 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('ngarejohnny@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ngarejohnny@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Auth.php(26): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->save()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\CodeIgniter4-4.3.5\\Kuza_Project\\public\\index.php')
+ERROR - 2023-06-15 07:24:42 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'codeigniter_aut...', 3306, '', 0)
+#1 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('ngarejohnny@gma...', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ngarejohnny@gma...', Array, Array)
+#7 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\app\Controllers\Auth.php(26): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\CodeIgniter.php(934): App\Controllers\Auth->save()
+#10 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('ngarejohnny@gma...', 'email', Array, NULL, 'email')
+#5 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ngarejohnny@gma...', Array, Array)
+#6 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\app\Controllers\Auth.php(26): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\CodeIgniter.php(934): App\Controllers\Auth->save()
+#9 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\CodeIgniter4-4.3.5\Kuza_Project\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-15 07:24:42 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(321): CodeIgniter\Validation\StrictRules\Rules->is_unique('ngarejohnny@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(179): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ngarejohnny@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Auth.php(26): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->save()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\CodeIgniter4-4.3.5\\Kuza_Project\\public\\index.php')
+INFO - 2023-06-15 07:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-15 07:28:04 --> Call to undefined function display_error()
+in APPPATH\Views\auth\register.php on line 67.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('auth/register', [], true)
+ 4 APPPATH\Controllers\Auth.php(58): view('auth/register', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->save()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\CodeIgniter4-4.3.5\\Kuza_Project\\public\\index.php')
+CRITICAL - 2023-06-15 07:31:44 --> Call to undefined function display_error()
+in APPPATH\Views\auth\register.php on line 67.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('auth/register', [], true)
+ 4 APPPATH\Controllers\Auth.php(58): view('auth/register', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->save()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\CodeIgniter4-4.3.5\\Kuza_Project\\public\\index.php')
+CRITICAL - 2023-06-15 07:32:17 --> Call to undefined function display_error()
+in APPPATH\Views\auth\register.php on line 67.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('auth/register', [], true)
+ 4 APPPATH\Controllers\Auth.php(58): view('auth/register', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->save()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\CodeIgniter4-4.3.5\\Kuza_Project\\public\\index.php')
+INFO - 2023-06-15 08:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
