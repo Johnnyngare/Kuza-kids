@@ -1,0 +1,19 @@
+CRITICAL - 2023-07-12 20:04:06 --> Undefined variable $paths
+in SYSTEMPATH\Common.php on line 635.
+ 1 SYSTEMPATH\Common.php(635): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paths', 'C:\\xampp\\htdocs\\CodeIgniter4-4.3.5\\Kuza_Project\\system\\Common.php', 635)
+ 2 SYSTEMPATH\CodeIgniter.php(244): helper([...])
+ 3 SYSTEMPATH\CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 4 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-07-12 20:14:05 --> include_once(APPPATH/Helpers/): Failed to open stream: No such file or directory
+in SYSTEMPATH\Common.php on line 671.
+ 1 SYSTEMPATH\Common.php(671): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include_once(APPPATH/Helpers/): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\CodeIgniter4-4.3.5\\Kuza_Project\\system\\Common.php', 671)
+ 2 SYSTEMPATH\Common.php(671): include_once()
+ 3 SYSTEMPATH\CodeIgniter.php(244): helper([...])
+ 4 SYSTEMPATH\CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 5 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-07-12 20:14:39 --> Undefined variable $paths
+in SYSTEMPATH\Common.php on line 636.
+ 1 SYSTEMPATH\Common.php(636): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paths', 'C:\\xampp\\htdocs\\CodeIgniter4-4.3.5\\Kuza_Project\\system\\Common.php', 636)
+ 2 SYSTEMPATH\CodeIgniter.php(244): helper([...])
+ 3 SYSTEMPATH\CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 4 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
